@@ -77,9 +77,12 @@ public class Artikl implements Serializable {
 	* i pokuša prikaz podataka o jednom ili svim artiklima
 	*/
 	
-	//Anotacija @OneToMany oznacava da jedan artikl moze biti deo vise Stavki porudzbina
-	//U klasi Stavka porudzbine kod stranog kljuca Artikl postavlja se suprotna anotacija, @OneToMany
-	//bi-directional many-to-one association to StavkaPorudzbine
+	/* 
+	 * Anotacija @OneToMany oznacava da jedan artikl moze biti deo vise Stavki porudzbina
+	 * U klasi Stavka porudzbine kod stranog kljuca Artikl postavlja se suprotna anotacija, @OneToMany
+	 * bi-directional many-to-one association to StavkaPorudzbine
+	 */
+	
 	@OneToMany(mappedBy="artikl")
 	@JsonIgnore
 	private List<StavkaPorudzbine> stavkaPorudzbine;

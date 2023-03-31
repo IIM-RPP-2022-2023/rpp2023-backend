@@ -49,7 +49,7 @@ public class Porudzbina implements Serializable {
 	
 	
 	//bi-directional many-to-one association to StavkaPorudzbine
-	@OneToMany(mappedBy="porudzbina") 
+	@OneToMany(mappedBy="porudzbina", cascade = {CascadeType.ALL}) 
 	@JsonIgnore
 	private List<StavkaPorudzbine> stavkaPorudzbine;
 

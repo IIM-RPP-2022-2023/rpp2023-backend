@@ -22,8 +22,13 @@ public class StavkaPorudzbine implements Serializable {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="STAVKA_PORUDZBINE_ID_GENERATOR")
 	private Integer id;
 	private BigDecimal cena;
+	
+	@Column(name="jedinica_mere")
 	private String jedinicaMere;
+	
+	@Column(name="redni_broj")
 	private Integer redniBroj;
+	
 	private BigDecimal kolicina;
 	
 	@ManyToOne
